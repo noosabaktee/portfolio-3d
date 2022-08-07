@@ -1,0 +1,41 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://3d/obj/rubik_cube.obj" type="ArrayMesh" id=1]
+
+[sub_resource type="SpatialMaterial" id=7]
+albedo_color = Color( 0.203922, 0.172549, 0.172549, 1 )
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 0.290196, 0.454902, 0.905882, 1 )
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_color = Color( 0.882353, 0.14902, 0.14902, 1 )
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_color = Color( 0.466667, 0.72549, 0.156863, 1 )
+
+[sub_resource type="SpatialMaterial" id=4]
+albedo_color = Color( 0.776471, 0.298039, 0.0313726, 1 )
+
+[sub_resource type="SpatialMaterial" id=5]
+
+[sub_resource type="BoxShape" id=6]
+extents = Vector3( 2.84431, 2.71068, 2.87758 )
+
+[node name="Rubik" type="KinematicBody"]
+transform = Transform( 0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 0, 0, 1.91 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 2.8, 0 )
+mesh = ExtResource( 1 )
+material/0 = SubResource( 7 )
+material/1 = SubResource( 1 )
+material/2 = SubResource( 2 )
+material/3 = SubResource( 3 )
+material/4 = SubResource( 4 )
+material/5 = SubResource( 5 )
+material/6 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.70093, 0 )
+shape = SubResource( 6 )

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Bata 2.mp3-5510e0f025afc9a74b10c0aacf5d04e9.mp3str"
+
+[deps]
+
+source_file="res://sound/Bata 2.mp3"
+dest_files=[ "res://.import/Bata 2.mp3-5510e0f025afc9a74b10c0aacf5d04e9.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

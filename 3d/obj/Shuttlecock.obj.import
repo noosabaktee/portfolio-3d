@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Shuttlecock.obj-8dd743119dc4ae9af4bbc73f66a28b2b.mesh"
+
+[deps]
+
+files=[ "res://.import/Shuttlecock.obj-8dd743119dc4ae9af4bbc73f66a28b2b.mesh" ]
+
+source_file="res://3d/obj/Shuttlecock.obj"
+dest_files=[ "res://.import/Shuttlecock.obj-8dd743119dc4ae9af4bbc73f66a28b2b.mesh", "res://.import/Shuttlecock.obj-8dd743119dc4ae9af4bbc73f66a28b2b.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

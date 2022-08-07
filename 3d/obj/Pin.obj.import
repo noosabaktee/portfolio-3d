@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Pin.obj-50eaa313a8d80b9744c48271a374bc45.mesh"
+
+[deps]
+
+files=[ "res://.import/Pin.obj-50eaa313a8d80b9744c48271a374bc45.mesh" ]
+
+source_file="res://3d/obj/Pin.obj"
+dest_files=[ "res://.import/Pin.obj-50eaa313a8d80b9744c48271a374bc45.mesh", "res://.import/Pin.obj-50eaa313a8d80b9744c48271a374bc45.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

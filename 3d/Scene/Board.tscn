@@ -1,0 +1,52 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://3d/obj/Board.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://codes/board.gd" type="Script" id=3]
+
+[sub_resource type="SpatialMaterial" id=5]
+albedo_color = Color( 0.843137, 0.882353, 0.713726, 1 )
+
+[sub_resource type="SpatialMaterial" id=6]
+albedo_color = Color( 0.843137, 0.882353, 0.713726, 1 )
+
+[sub_resource type="CubeMesh" id=1]
+
+[sub_resource type="SpatialMaterial" id=7]
+albedo_color = Color( 0.254902, 0.352941, 0.101961, 1 )
+
+[sub_resource type="PlaneMesh" id=2]
+
+[sub_resource type="SpatialMaterial" id=3]
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 19.9051, 13.2206, 1.35922 )
+
+[node name="Board" type="KinematicBody"]
+transform = Transform( -0.69282, 0, -0.4, 0, 0.8, 0, 0.4, 0, -0.69282, 0, -1.2, 0 )
+script = ExtResource( 3 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -0.9, 0, 1, -3.93403e-08, 0, 15.2074, -1.48056 )
+mesh = ExtResource( 1 )
+material/0 = SubResource( 5 )
+material/1 = SubResource( 6 )
+material/2 = null
+
+[node name="MeshInstance2" type="MeshInstance" parent="."]
+transform = Transform( 1.5, 0, 0, 0, 2, 0, 0, 0, 1, -12.1638, 2, 0.000692368 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 7 )
+
+[node name="MeshInstance3" type="MeshInstance" parent="."]
+transform = Transform( 1.5, 0, 0, 0, 2, 0, 0, 0, 1, 12.164, 2, 0.001 )
+mesh = SubResource( 1 )
+material/0 = SubResource( 7 )
+
+[node name="Screen" type="MeshInstance" parent="."]
+transform = Transform( 18.5, 4.76837e-07, -2.84217e-14, 0, -6.55671e-07, -9.5, 0, 15, -4.15258e-07, 5.96046e-08, 15.6148, 1.3 )
+mesh = SubResource( 2 )
+material/0 = SubResource( 3 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, -4.26326e-14, 0, 1, 0, 4.26326e-14, 0, 1, 0, 13.1929, 0 )
+shape = SubResource( 4 )

@@ -1,0 +1,177 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="CubeMesh" id=12]
+
+[sub_resource type="BoxShape" id=13]
+
+[node name="Road" type="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.90159, 0, 0 )
+
+[node name="Kinematic" type="KinematicBody" parent="."]
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Kinematic"]
+transform = Transform( 1, 0, 0, 0, 0.1, 0, 0, 0, 1, 0, 0, 0 )
+mesh = SubResource( 12 )
+skeleton = NodePath("../../..")
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Kinematic"]
+transform = Transform( 1, 0, 0, 0, 0.1, 0, 0, 0, 1, 0, 0, 0 )
+shape = SubResource( 13 )
+
+[node name="Kinematic2" type="KinematicBody" parent="."]
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, -0.460622, 0, 5 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Kinematic2"]
+transform = Transform( 1, 0, 0, 0, 0.1, 0, 0, 0, 1, 0, 0, 0 )
+mesh = SubResource( 12 )
+skeleton = NodePath("../../..")
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Kinematic2"]
+transform = Transform( 1, 0, 0, 0, 0.1, 0, 0, 0, 1, 0, 0, 0 )
+shape = SubResource( 13 )
+
+[node name="Kinematic3" type="KinematicBody" parent="."]
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0.377, 0, 10 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Kinematic3"]
+transform = Transform( 1, 0, 0, 0, 0.1, 0, 0, 0, 1, 0, 0, 0 )
+mesh = SubResource( 12 )
+skeleton = NodePath("../../..")
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Kinematic3"]
+transform = Transform( 1, 0, 0, 0, 0.1, 0, 0, 0, 1, 0, 0, 0 )
+shape = SubResource( 13 )
+
+[node name="Kinematic4" type="KinematicBody" parent="."]
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 15 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Kinematic4"]
+transform = Transform( 1, 0, 0, 0, 0.1, 0, 0, 0, 1, 0, 0, 0 )
+mesh = SubResource( 12 )
+skeleton = NodePath("../../..")
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Kinematic4"]
+transform = Transform( 1, 0, 0, 0, 0.1, 0, 0, 0, 1, 0, 0, 0 )
+shape = SubResource( 13 )
+
+[node name="Kinematic5" type="KinematicBody" parent="."]
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0.423, 0, 20 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Kinematic5"]
+transform = Transform( 1, 0, 0, 0, 0.1, 0, 0, 0, 1, 0, 0, 0 )
+mesh = SubResource( 12 )
+skeleton = NodePath("../../..")
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Kinematic5"]
+transform = Transform( 1, 0, 0, 0, 0.1, 0, 0, 0, 1, 0, 0, 0 )
+shape = SubResource( 13 )
+
+[node name="Kinematic6" type="KinematicBody" parent="."]
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, -0.383589, 0, 25 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Kinematic6"]
+transform = Transform( 1, 0, 0, 0, 0.1, 0, 0, 0, 1, 0, 0, 0 )
+mesh = SubResource( 12 )
+skeleton = NodePath("../../..")
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Kinematic6"]
+transform = Transform( 1, 0, 0, 0, 0.1, 0, 0, 0, 1, 0, 0, 0 )
+shape = SubResource( 13 )
+
+[node name="Kinematic7" type="KinematicBody" parent="."]
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0.328, 0, 30 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Kinematic7"]
+transform = Transform( 1, 0, 0, 0, 0.1, 0, 0, 0, 1, 0, 0, 0 )
+mesh = SubResource( 12 )
+skeleton = NodePath("../../..")
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Kinematic7"]
+transform = Transform( 1, 0, 0, 0, 0.1, 0, 0, 0, 1, 0, 0, 0 )
+shape = SubResource( 13 )
+
+[node name="Kinematic8" type="KinematicBody" parent="."]
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0.232, 0, 35 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Kinematic8"]
+transform = Transform( 1, 0, 0, 0, 0.1, 0, 0, 0, 1, 0, 0, 0 )
+mesh = SubResource( 12 )
+skeleton = NodePath("../../..")
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Kinematic8"]
+transform = Transform( 1, 0, 0, 0, 0.1, 0, 0, 0, 1, 0, 0, 0 )
+shape = SubResource( 13 )
+
+[node name="Kinematic9" type="KinematicBody" parent="."]
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, -0.64, 0, 40 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Kinematic9"]
+transform = Transform( 1, 0, 0, 0, 0.1, 0, 0, 0, 1, 0, 0, 0 )
+mesh = SubResource( 12 )
+skeleton = NodePath("../../..")
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Kinematic9"]
+transform = Transform( 1, 0, 0, 0, 0.1, 0, 0, 0, 1, 0, 0, 0 )
+shape = SubResource( 13 )
+
+[node name="Kinematic10" type="KinematicBody" parent="."]
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 45 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Kinematic10"]
+transform = Transform( 1, 0, 0, 0, 0.1, 0, 0, 0, 1, 0, 0, 0 )
+mesh = SubResource( 12 )
+skeleton = NodePath("../../..")
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Kinematic10"]
+transform = Transform( 1, 0, 0, 0, 0.1, 0, 0, 0, 1, 0, 0, 0 )
+shape = SubResource( 13 )
+
+[node name="Kinematic11" type="KinematicBody" parent="."]
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, -0.614095, 0, 50 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Kinematic11"]
+transform = Transform( 1, 0, 0, 0, 0.1, 0, 0, 0, 1, 0, 0, 0 )
+mesh = SubResource( 12 )
+skeleton = NodePath("../../..")
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Kinematic11"]
+transform = Transform( 1, 0, 0, 0, 0.1, 0, 0, 0, 1, 0, 0, 0 )
+shape = SubResource( 13 )
+
+[node name="Kinematic12" type="KinematicBody" parent="."]
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, -0.235192, 0, 55 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Kinematic12"]
+transform = Transform( 1, 0, 0, 0, 0.1, 0, 0, 0, 1, 0, 0, 0 )
+mesh = SubResource( 12 )
+skeleton = NodePath("../../..")
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Kinematic12"]
+transform = Transform( 1, 0, 0, 0, 0.1, 0, 0, 0, 1, 0, 0, 0 )
+shape = SubResource( 13 )
+
+[node name="Kinematic13" type="KinematicBody" parent="."]
+transform = Transform( 2, 0, 0, 0, 1, 0, 0, 0, 1, -0.025991, 0, 60 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Kinematic13"]
+transform = Transform( 1, 0, 0, 0, 0.1, 0, 0, 0, 1, 0, 0, 0 )
+mesh = SubResource( 12 )
+skeleton = NodePath("../../..")
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Kinematic13"]
+transform = Transform( 1, 0, 0, 0, 0.1, 0, 0, 0, 1, 0, 0, 0 )
+shape = SubResource( 13 )

@@ -1,0 +1,124 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://font/PixelOperator-Bold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://img/Social/fb.png" type="Texture" id=2]
+[ext_resource path="res://img/Social/ig.png" type="Texture" id=3]
+[ext_resource path="res://img/Social/tw.png" type="Texture" id=4]
+[ext_resource path="res://img/Social/db.png" type="Texture" id=5]
+
+[sub_resource type="ViewportTexture" id=9]
+viewport_path = NodePath("Follow Me/Viewport")
+
+[sub_resource type="DynamicFont" id=8]
+size = 40
+font_data = ExtResource( 1 )
+
+[sub_resource type="ViewportTexture" id=10]
+viewport_path = NodePath("IG/ig/Viewport")
+
+[sub_resource type="ViewportTexture" id=11]
+viewport_path = NodePath("DB/db/Viewport")
+
+[sub_resource type="ViewportTexture" id=12]
+viewport_path = NodePath("TW/tw/Viewport")
+
+[sub_resource type="ViewportTexture" id=13]
+viewport_path = NodePath("FB/fb/Viewport")
+
+[node name="Social Media" type="Spatial"]
+
+[node name="Follow Me" type="Sprite3D" parent="."]
+transform = Transform( -13, -1.96295e-06, 8.58031e-14, 0, -5.68248e-07, -13, 1.96295e-06, -13, 5.68248e-07, -16.7026, 0.001, 15.2538 )
+texture = SubResource( 9 )
+
+[node name="Viewport" type="Viewport" parent="Follow Me"]
+size = Vector2( 280, 100 )
+transparent_bg = true
+
+[node name="Label" type="Label" parent="Follow Me/Viewport"]
+margin_right = 100.0
+margin_bottom = 120.0
+custom_fonts/font = SubResource( 8 )
+text = "Follow Me"
+align = 1
+valign = 1
+
+[node name="IG" type="Sprite3D" parent="."]
+transform = Transform( -2, 1.74846e-07, -4.37114e-08, -8.74228e-08, 3.82137e-15, 1, 1.74846e-07, 2, 1.91069e-15, 0, 0, 6 )
+texture = ExtResource( 3 )
+
+[node name="ig" type="Sprite3D" parent="IG"]
+transform = Transform( 5, 3.17865e-07, 2.18557e-07, 3.17865e-07, -5, 2.18557e-07, 4.37114e-07, -4.37114e-07, -10, 9.0757, 0.62141, 0.00100079 )
+texture = SubResource( 10 )
+
+[node name="Viewport" type="Viewport" parent="IG/ig"]
+size = Vector2( 280, 100 )
+transparent_bg = true
+
+[node name="Label" type="Label" parent="IG/ig/Viewport"]
+margin_right = 100.0
+margin_bottom = 120.0
+custom_fonts/font = SubResource( 8 )
+text = "@noosabaktee"
+align = 1
+valign = 1
+
+[node name="DB" type="Sprite3D" parent="."]
+transform = Transform( -2, 1.74846e-07, -4.37114e-08, -8.74228e-08, 3.82137e-15, 1, 1.74846e-07, 2, 1.91069e-15, 0, 0, 0 )
+texture = ExtResource( 5 )
+
+[node name="db" type="Sprite3D" parent="DB"]
+transform = Transform( 5, 3.17865e-07, 2.18557e-07, 3.17865e-07, -5, 2.18557e-07, 4.37114e-07, -4.37114e-07, -10, 9.0757, 0.23862, 0.00100079 )
+texture = SubResource( 11 )
+
+[node name="Viewport" type="Viewport" parent="DB/db"]
+size = Vector2( 280, 100 )
+transparent_bg = true
+
+[node name="Label" type="Label" parent="DB/db/Viewport"]
+margin_right = 100.0
+margin_bottom = 120.0
+custom_fonts/font = SubResource( 8 )
+text = "/ramanusabakti"
+align = 1
+valign = 1
+
+[node name="TW" type="Sprite3D" parent="."]
+transform = Transform( -2, 1.74846e-07, -4.37114e-08, -8.74228e-08, 3.82137e-15, 1, 1.74846e-07, 2, 1.91069e-15, 0, 0, -6 )
+texture = ExtResource( 4 )
+
+[node name="tw" type="Sprite3D" parent="TW"]
+transform = Transform( 5, 3.17865e-07, 2.18557e-07, 3.17865e-07, -5, 2.18557e-07, 4.37114e-07, -4.37114e-07, -10, 9.0757, 0.279868, 0.00100079 )
+texture = SubResource( 12 )
+
+[node name="Viewport" type="Viewport" parent="TW/tw"]
+size = Vector2( 280, 100 )
+transparent_bg = true
+
+[node name="Label" type="Label" parent="TW/tw/Viewport"]
+margin_right = 100.0
+margin_bottom = 120.0
+custom_fonts/font = SubResource( 8 )
+text = "@ramanusabakti"
+align = 1
+valign = 1
+
+[node name="FB" type="Sprite3D" parent="."]
+transform = Transform( -2, 1.74846e-07, -4.37114e-08, -8.74228e-08, 3.82137e-15, 1, 1.74846e-07, 2, 1.91069e-15, 0, 0, -12 )
+texture = ExtResource( 2 )
+
+[node name="fb" type="Sprite3D" parent="FB"]
+transform = Transform( 5, 3.17865e-07, 2.18557e-07, 3.17865e-07, -5, 2.18557e-07, 4.37114e-07, -4.37114e-07, -10, 9.0757, 0.472462, 0.00100078 )
+texture = SubResource( 13 )
+
+[node name="Viewport" type="Viewport" parent="FB/fb"]
+size = Vector2( 280, 100 )
+transparent_bg = true
+
+[node name="Label" type="Label" parent="FB/fb/Viewport"]
+margin_right = 100.0
+margin_bottom = 120.0
+custom_fonts/font = SubResource( 8 )
+text = "R Nusa Bakti"
+align = 1
+valign = 1

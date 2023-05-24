@@ -6,6 +6,7 @@
 
 [sub_resource type="SpatialMaterial" id=2]
 albedo_texture = ExtResource( 1 )
+roughness = 0.0
 
 [sub_resource type="SphereShape" id=3]
 

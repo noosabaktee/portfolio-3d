@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Rama.jpg-cfb58e207499ad16b76236534fcf95c1.stex"
+path="res://.import/Rama.png-5f5ad5a7a2e361bf91b4188da5791aa5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/Rama.jpg"
-dest_files=[ "res://.import/Rama.jpg-cfb58e207499ad16b76236534fcf95c1.stex" ]
+source_file="res://img/Rama.png"
+dest_files=[ "res://.import/Rama.png-5f5ad5a7a2e361bf91b4188da5791aa5.stex" ]
 
 [params]
 

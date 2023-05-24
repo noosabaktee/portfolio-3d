@@ -1,6 +1,6 @@
 [gd_scene load_steps=51 format=2]
 
-[ext_resource path="res://scenes/Camera.gd" type="Script" id=1]
+[ext_resource path="res://codes/Camera.gd" type="Script" id=1]
 [ext_resource path="res://scenes/Vehicle.tscn" type="PackedScene" id=2]
 [ext_resource path="res://font/PixelOperator-Bold.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://ui/arrowRight.png" type="Texture" id=4]
@@ -39,7 +39,7 @@
 [ext_resource path="res://3d/React/Love.tscn" type="PackedScene" id=37]
 [ext_resource path="res://3d/React/Angry.tscn" type="PackedScene" id=38]
 [ext_resource path="res://3d/React/Wow.tscn" type="PackedScene" id=39]
-[ext_resource path="res://img/Rama.jpg" type="Texture" id=40]
+[ext_resource path="res://img/Rama.png" type="Texture" id=40]
 
 [sub_resource type="PlaneMesh" id=3]
 
@@ -77,7 +77,7 @@ font_data = ExtResource( 3 )
 script = ExtResource( 6 )
 
 [node name="Player" type="Spatial" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 104.184, 0, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 100, 0, 0 )
 
 [node name="Vehicle" parent="Player" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12, 0 )
@@ -104,54 +104,81 @@ __meta__ = {
 mesh = SubResource( 3 )
 skeleton = NodePath("")
 material/0 = SubResource( 18 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Plane2" type="MeshInstance" parent="Plane"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0 )
 mesh = SubResource( 3 )
 skeleton = NodePath("")
 material/0 = SubResource( 18 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Plane3" type="MeshInstance" parent="Plane"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2 )
 mesh = SubResource( 3 )
 skeleton = NodePath("")
 material/0 = SubResource( 18 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Plane4" type="MeshInstance" parent="Plane"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2 )
 mesh = SubResource( 3 )
 skeleton = NodePath("")
 material/0 = SubResource( 18 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Plane5" type="MeshInstance" parent="Plane"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 2 )
 mesh = SubResource( 3 )
 skeleton = NodePath("")
 material/0 = SubResource( 18 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Plane6" type="MeshInstance" parent="Plane"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 0 )
 mesh = SubResource( 3 )
 skeleton = NodePath("")
 material/0 = SubResource( 18 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Plane7" type="MeshInstance" parent="Plane"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -2 )
 mesh = SubResource( 3 )
 skeleton = NodePath("")
 material/0 = SubResource( 18 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Plane8" type="MeshInstance" parent="Plane"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2 )
 mesh = SubResource( 3 )
 skeleton = NodePath("")
 material/0 = SubResource( 18 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Plane9" type="MeshInstance" parent="Plane"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -2 )
 mesh = SubResource( 3 )
 skeleton = NodePath("")
 material/0 = SubResource( 18 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="CollisionShape" type="CollisionShape" parent="Plane"]
 transform = Transform( 5, 0, 0, 0, 1, 0, 0, 0, 5, 0, 0, 0 )
@@ -282,8 +309,8 @@ normal = ExtResource( 9 )
 [node name="Message" type="Control" parent="UI"]
 anchor_top = 1.0
 anchor_bottom = 1.0
-margin_top = 50.0
-margin_bottom = 50.0
+margin_top = 200.0
+margin_bottom = 200.0
 __meta__ = {
 "_edit_use_anchors_": false
 }

@@ -1,6 +1,7 @@
 extends Node
 # Get global vaariables
 onready var vars = get_node("/root/Variables")
+var remTouched = false
 
 # MAJU 
 func _on_A_Button_pressed():

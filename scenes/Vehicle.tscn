@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://models/vehicle/Material.material" type="Material" id=1]
 [ext_resource path="res://models/vehicle/Material_001.material" type="Material" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://sound/Engine.mp3" type="AudioStream" id=5]
 [ext_resource path="res://sound/Crash.mp3" type="AudioStream" id=6]
 [ext_resource path="res://sound/Bata 2.mp3" type="AudioStream" id=7]
+[ext_resource path="res://codes/position_controller.gd" type="Script" id=8]
 [ext_resource path="res://sound/Brake.mp3" type="AudioStream" id=9]
 [ext_resource path="res://sound/Crash 2.mp3" type="AudioStream" id=10]
 
@@ -87,6 +88,7 @@ surfaces/1 = {
 [sub_resource type="SpatialMaterial" id=3]
 
 [node name="Vehicle" type="Spatial"]
+script = ExtResource( 8 )
 
 [node name="VehicleBody" type="VehicleBody" parent="."]
 transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 0 )

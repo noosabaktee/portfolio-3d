@@ -37,6 +37,9 @@ onready var bata = get_parent().get_node("Sound/Bata")
 var las_velocity = 0
 var last_move = 0 #1 = maju, 2= mundur
 var info = ""
+var canPlayCrashSound = true
+var canPlayCrashSound2 = true
+var canPlayBrakeSound = true
 
 
 func _physics_process(delta):
@@ -69,52 +72,66 @@ func _physics_process(delta):
 			steer_angle = steer_target
 	steering = steer_angle
 	
-#	if Input.is_action_pressed("ui_up") or vars.maju == true:
-#		if las_velocity <= 0:
-#			if linear_velocity.z > 0.3:
-##				if engine.pitch_scale <= 1.2:
-##					engine.pitch_scale += 0.01
-#				info = "maju"
-#		elif las_velocity >= 0:
-#			if linear_velocity.z < -0.3:
-##				if engine.pitch_scale <= 1.2:
-##					engine.pitch_scale += 0.01		
-#				info = "maju"
-#	elif Input.is_action_pressed("ui_down") or vars.mundur == true:
-#		if las_velocity <= 0:
-#			if linear_velocity.z < -0.3:
-##				if engine.pitch_scale <= 1:
-##					engine.pitch_scale += 0.01
-#					info = "mundur"
-#		elif las_velocity >= 0:
-#			if linear_velocity.z > 0.3:
-##				if engine.pitch_scale <= 1:
-##					engine.pitch_scale += 0.01
-#					info = "mundur"
-#	elif Input.is_action_just_pressed("ui_accept") or vars.rem == true:
-#		if linear_velocity.z < -0.3 or linear_velocity.z > 0.3:
-#			brake_sound.play()
-#	else:
-#		if engine.pitch_scale >= 0.8:
-#			engine.pitch_scale -= 0.01
-#
-#	if Input.is_action_just_released("ui_up"):
-#		las_velocity = linear_velocity.z
-#	elif Input.is_action_just_released("ui_down"):
-#		las_velocity = linear_velocity.z
-#	elif Input.is_action_just_released("ui_accept"):
-#		las_velocity = linear_velocity.z
-#		print(info)
-
-
-
-
+	if vars.rem == false:
+		canPlayBrakeSound = true
+		
+	if Input.is_action_just_pressed("ui_accept") or (vars.rem == true and canPlayBrakeSound == true):
+		if linear_velocity.z < -0.3 or linear_velocity.z > 0.3:
+			brake_sound.play()
+			canPlayBrakeSound = false
+	elif Input.is_action_pressed("ui_up") or vars.maju == true:
+		if get_rotation_degrees().y >= -90 and get_rotation_degrees().y <= 90:
+			if linear_velocity.z >= 0.3:
+				if engine.pitch_scale <= 1.2:
+					engine.pitch_scale += 0.01
+		elif (get_rotation_degrees().y >= -180 and get_rotation_degrees().y <= -90) or get_rotation_degrees().y > 180:
+			if linear_velocity.z <= -0.3:
+				if engine.pitch_scale <= 1.2:
+					engine.pitch_scale += 0.01
+	elif Input.is_action_pressed("ui_down") or vars.mundur == true:
+		if get_rotation_degrees().y >= -90 and get_rotation_degrees().y <= 90:
+			if linear_velocity.z <= -0.3:
+				if engine.pitch_scale <= 1:
+					engine.pitch_scale += 0.01
+				elif engine.pitch_scale >= 1:
+					engine.pitch_scale -= 0.01
+		elif (get_rotation_degrees().y >= -180 and get_rotation_degrees().y <= -90) or get_rotation_degrees().y > 180:
+			if linear_velocity.z >= 0.3:
+				if engine.pitch_scale <= 1:
+					engine.pitch_scale += 0.01
+				elif engine.pitch_scale >= 1:
+					engine.pitch_scale -= 0.01
+	else:
+		if engine.pitch_scale >= 0.8:
+			engine.pitch_scale -= 0.01	
+			
 func _on_Area_body_entered(body):
 	if body is KinematicBody or body is StaticBody:
-		if linear_velocity.z > 1 or linear_velocity.z < -1:
-			crash.play()
-		elif body.name == "Plane":
-			crash2.play()
+		if body.name == "Plane":
+			if canPlayCrashSound2:
+				crash2.play()
+				canPlayCrashSound2 = false
+			var t2 = Timer.new()
+			t2.set_wait_time(1)
+			t2.set_one_shot(true)
+			self.add_child(t2)
+			t2.start()
+			yield(t2, "timeout")
+			t2.queue_free()	
+			canPlayCrashSound2 = true
+		elif body.name != "Plane":
+			if  linear_velocity.z > 1 or linear_velocity.z < -1:
+				if canPlayCrashSound:
+					crash.play()
+					canPlayCrashSound = false
+				var t = Timer.new()
+				t.set_wait_time(1)
+				t.set_one_shot(true)
+				self.add_child(t)
+				t.start()
+				yield(t, "timeout")
+				t.queue_free()	
+				canPlayCrashSound = true	
 #	elif body is RigidBody:
 #		bata.play()
 #		if body.name == "Plane":

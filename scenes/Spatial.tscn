@@ -3,13 +3,12 @@
 [ext_resource path="res://codes/Camera.gd" type="Script" id=1]
 [ext_resource path="res://scenes/Vehicle.tscn" type="PackedScene" id=2]
 [ext_resource path="res://font/PixelOperator-Bold.ttf" type="DynamicFontData" id=3]
-[ext_resource path="res://ui/arrowRight.png" type="Texture" id=4]
-[ext_resource path="res://ui/arrowLeft.png" type="Texture" id=5]
+[ext_resource path="res://ui/Left.png" type="Texture" id=4]
+[ext_resource path="res://ui/Right.png" type="Texture" id=5]
 [ext_resource path="res://codes/main.gd" type="Script" id=6]
-[ext_resource path="res://ui/buttonA.png" type="Texture" id=7]
+[ext_resource path="res://ui/A.png" type="Texture" id=7]
 [ext_resource path="res://codes/Controller.gd" type="Script" id=8]
-[ext_resource path="res://ui/buttonX.png" type="Texture" id=9]
-[ext_resource path="res://ui/buttonB.png" type="Texture" id=10]
+[ext_resource path="res://ui/X.png" type="Texture" id=10]
 [ext_resource path="res://3d/Scene/Road.tscn" type="PackedScene" id=11]
 [ext_resource path="res://3d/Scene/Bowling Ball.tscn" type="PackedScene" id=12]
 [ext_resource path="res://3d/Scene/Bowling Pin.tscn" type="PackedScene" id=13]
@@ -40,6 +39,7 @@
 [ext_resource path="res://3d/React/Angry.tscn" type="PackedScene" id=38]
 [ext_resource path="res://3d/React/Wow.tscn" type="PackedScene" id=39]
 [ext_resource path="res://img/Rama.png" type="Texture" id=40]
+[ext_resource path="res://ui/B.png" type="Texture" id=41]
 
 [sub_resource type="PlaneMesh" id=3]
 
@@ -260,47 +260,45 @@ script = ExtResource( 8 )
 [node name="Arrow" type="HBoxContainer" parent="UI"]
 anchor_top = 1.0
 anchor_bottom = 1.0
+margin_left = 21.0
 margin_top = -135.0
-margin_right = 325.0
-margin_bottom = -18.0
+margin_right = 306.0
+margin_bottom = -31.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="LeftButton" type="TouchScreenButton" parent="UI/Arrow"]
-position = Vector2( 20, 0 )
-scale = Vector2( 1.2, 1.2 )
-normal = ExtResource( 5 )
+position = Vector2( 30, 0 )
+normal = ExtResource( 4 )
 
 [node name="RightButton" type="TouchScreenButton" parent="UI/Arrow"]
 position = Vector2( 180, 0 )
-scale = Vector2( 1.2, 1.2 )
-normal = ExtResource( 4 )
+normal = ExtResource( 5 )
 
 [node name="Button" type="VBoxContainer" parent="UI"]
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -134.0
-margin_top = -381.0
+margin_left = -130.0
+margin_top = -415.0
+margin_right = -30.0
+margin_bottom = -31.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="A_Button" type="TouchScreenButton" parent="UI/Button"]
-scale = Vector2( 1.2, 1.2 )
 normal = ExtResource( 7 )
 
 [node name="B_Button" type="TouchScreenButton" parent="UI/Button"]
-position = Vector2( 0, 240 )
-scale = Vector2( 1.2, 1.2 )
-normal = ExtResource( 10 )
+position = Vector2( 0, 280 )
+normal = ExtResource( 41 )
 
 [node name="X_Button" type="TouchScreenButton" parent="UI/Button"]
-position = Vector2( 0, 120 )
-scale = Vector2( 1.2, 1.2 )
-normal = ExtResource( 9 )
+position = Vector2( 0, 140 )
+normal = ExtResource( 10 )
 
 [node name="Message" type="Control" parent="UI"]
 anchor_top = 1.0
@@ -349,11 +347,11 @@ scale = Vector2( 0.14, 0.16 )
 texture = ExtResource( 40 )
 
 [node name="Node2D" type="Node2D" parent="UI/Message"]
-position = Vector2( 820, 20 )
+position = Vector2( 820, 30 )
 
 [node name="close" type="TouchScreenButton" parent="UI/Message/Node2D"]
-scale = Vector2( 0.4, 0.4 )
-normal = ExtResource( 9 )
+scale = Vector2( 0.3, 0.3 )
+normal = ExtResource( 10 )
 
 [node name="Road" type="Node" parent="."]
 

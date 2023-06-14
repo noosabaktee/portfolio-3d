@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=2]
+[gd_scene load_steps=50 format=2]
 
 [ext_resource path="res://codes/Camera.gd" type="Script" id=1]
 [ext_resource path="res://scenes/Vehicle.tscn" type="PackedScene" id=2]
@@ -64,10 +64,6 @@ viewport_path = NodePath("Words/Portfolio/Viewport")
 
 [sub_resource type="ViewportTexture" id=12]
 viewport_path = NodePath("Words/My Projects/Viewport")
-
-[sub_resource type="DynamicFont" id=17]
-size = 36
-font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=16]
 size = 20
@@ -283,12 +279,11 @@ normal = ExtResource( 4 )
 
 [node name="Button" type="VBoxContainer" parent="UI"]
 anchor_left = 1.0
-anchor_top = 0.692
+anchor_top = 1.0
 anchor_right = 1.0
-anchor_bottom = 0.692
+anchor_bottom = 1.0
 margin_left = -134.0
-margin_top = -190.2
-margin_bottom = 190.8
+margin_top = -381.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -321,33 +316,6 @@ position = Vector2( 440, 80 )
 scale = Vector2( 1.4, 1.2 )
 texture = ExtResource( 34 )
 
-[node name="Close" type="Button" parent="UI/Message/Sprite"]
-self_modulate = Color( 1, 1, 1, 0 )
-margin_left = 259.0
-margin_top = -60.0
-margin_right = 306.0
-margin_bottom = -16.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="Label" parent="UI/Message/Sprite/Close"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -8.0
-margin_top = -16.0
-margin_right = 10.0
-margin_bottom = 21.0
-custom_fonts/font = SubResource( 17 )
-text = "x"
-align = 1
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="Label" type="Label" parent="UI/Message/Sprite"]
 margin_left = -206.111
 margin_top = -14.1667
@@ -379,6 +347,13 @@ __meta__ = {
 position = Vector2( -255.358, 0 )
 scale = Vector2( 0.14, 0.16 )
 texture = ExtResource( 40 )
+
+[node name="Node2D" type="Node2D" parent="UI/Message"]
+position = Vector2( 820, 20 )
+
+[node name="close" type="TouchScreenButton" parent="UI/Message/Node2D"]
+scale = Vector2( 0.4, 0.4 )
+normal = ExtResource( 9 )
 
 [node name="Road" type="Node" parent="."]
 
@@ -729,4 +704,4 @@ transform = Transform( 1, 0, 0, 0, 0.939692, -0.34202, 0, 0.34202, 0.939692, -15
 [connection signal="released" from="UI/Button/B_Button" to="UI" method="_on_B_Button_released"]
 [connection signal="pressed" from="UI/Button/X_Button" to="UI" method="_on_X_Button_pressed"]
 [connection signal="released" from="UI/Button/X_Button" to="UI" method="_on_X_Button_released"]
-[connection signal="button_down" from="UI/Message/Sprite/Close" to="." method="_on_Close_button_down"]
+[connection signal="pressed" from="UI/Message/Node2D/close" to="." method="_on_close_pressed"]

@@ -18,13 +18,13 @@ func _ready():
 	window_y = get_viewport().size.y
 	window_x = get_viewport().size.x
 	
+	if(window_x > window_y):
+		button.visible = false
+		arrow.visible = false
+	
 	message.rect_position.y = window_y + 200
 	ballonAnim.play("Ballon Anim");
 	get_tree().root.connect("size_changed", self, "_on_viewport_size_changed")
-	
-func _on_viewport_size_changed():
-	window_y = get_viewport().size.y
-	window_x = get_viewport().size.x
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

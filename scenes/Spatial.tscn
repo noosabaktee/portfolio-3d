@@ -49,21 +49,21 @@ albedo_color = Color( 0.262745, 0.513726, 0.207843, 1 )
 [sub_resource type="ConcavePolygonShape" id=2]
 data = PoolVector3Array( -1, 0, 1, 1, 0, -1, -1, 0, -1, -1, 0, 1, 1, 0, 1, 1, 0, -1, -1, 0, 1, 1, 0, -1, 1, 0, 1, -1, 0, 1, -1, 0, -1, 1, 0, -1, 1, 0, 1, 1, 0, -1, 1, 0, -1, 1, 0, 1, 1, 0, 1, 1, 0, -1, -1, 0, -1, -1, 0, 1, -1, 0, 1, -1, 0, -1, -1, 0, -1, -1, 0, 1, 1, 0, -1, -1, 0, -1, -1, 0, -1, 1, 0, -1, 1, 0, -1, -1, 0, -1, -1, 0, 1, 1, 0, 1, 1, 0, 1, -1, 0, 1, -1, 0, 1, 1, 0, 1 )
 
-[sub_resource type="ViewportTexture" id=11]
-viewport_path = NodePath("Words/AboutMe/Viewport")
+[sub_resource type="ViewportTexture" id=19]
+viewport_path = NodePath("Words/ViewportAbout")
 
 [sub_resource type="DynamicFont" id=8]
 size = 40
 font_data = ExtResource( 3 )
 
-[sub_resource type="ViewportTexture" id=15]
-viewport_path = NodePath("Words/Hello/Viewport")
+[sub_resource type="ViewportTexture" id=20]
+viewport_path = NodePath("Words/ViewportHello")
 
-[sub_resource type="ViewportTexture" id=14]
-viewport_path = NodePath("Words/Portfolio/Viewport")
+[sub_resource type="ViewportTexture" id=21]
+viewport_path = NodePath("Words/ViewportPortfolio")
 
-[sub_resource type="ViewportTexture" id=12]
-viewport_path = NodePath("Words/My Projects/Viewport")
+[sub_resource type="ViewportTexture" id=22]
+viewport_path = NodePath("Words/ViewportProjects")
 
 [sub_resource type="DynamicFont" id=16]
 size = 20
@@ -183,15 +183,15 @@ shape = SubResource( 2 )
 [node name="Words" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0 )
 
-[node name="AboutMe" type="Sprite3D" parent="Words"]
-transform = Transform( -8.74228e-07, -20, 8.74228e-07, 0, -8.74228e-07, -20, 20, -8.74228e-07, 3.82137e-14, 13.6623, 0.001, 59.7249 )
-texture = SubResource( 11 )
-
-[node name="Viewport" type="Viewport" parent="Words/AboutMe"]
+[node name="ViewportAbout" type="Viewport" parent="Words"]
 size = Vector2( 280, 100 )
 transparent_bg = true
 
-[node name="Label" type="Label" parent="Words/AboutMe/Viewport"]
+[node name="AboutMe" type="Sprite3D" parent="Words/ViewportAbout"]
+transform = Transform( -8.74228e-07, -20, 8.74228e-07, 0, -8.74228e-07, -20, 20, -8.74228e-07, 3.82137e-14, 13.6623, 0.101, 59.7249 )
+texture = SubResource( 19 )
+
+[node name="Label" type="Label" parent="Words/ViewportAbout"]
 margin_right = 100.0
 margin_bottom = 120.0
 custom_fonts/font = SubResource( 8 )
@@ -199,15 +199,15 @@ text = "About me ->"
 align = 1
 valign = 1
 
-[node name="Hello" type="Sprite3D" parent="Words"]
-transform = Transform( -15, 2.26494e-06, -9.90035e-14, 0, -6.55671e-07, -15, -2.26494e-06, -15, 6.55671e-07, 0, 0.001, 116.001 )
-texture = SubResource( 15 )
-
-[node name="Viewport" type="Viewport" parent="Words/Hello"]
+[node name="ViewportHello" type="Viewport" parent="Words"]
 size = Vector2( 700, 200 )
 transparent_bg = true
 
-[node name="Label" type="Label" parent="Words/Hello/Viewport"]
+[node name="Hello" type="Sprite3D" parent="Words/ViewportHello"]
+transform = Transform( -15, 2.26494e-06, -9.90035e-14, 0, -6.55671e-07, -15, -2.26494e-06, -15, 6.55671e-07, 0, 0.101, 116.001 )
+texture = SubResource( 20 )
+
+[node name="Label" type="Label" parent="Words/ViewportHello"]
 margin_right = 100.0
 margin_bottom = 120.0
 custom_fonts/font = SubResource( 8 )
@@ -218,15 +218,15 @@ years old.
 "
 valign = 1
 
-[node name="Portfolio" type="Sprite3D" parent="Words"]
-transform = Transform( -15, 2.26494e-06, -9.90035e-14, 0, -6.55671e-07, -15, -2.26494e-06, -15, 6.55671e-07, -60, 0.001, -185.284 )
-texture = SubResource( 14 )
-
-[node name="Viewport" type="Viewport" parent="Words/Portfolio"]
+[node name="ViewportPortfolio" type="Viewport" parent="Words"]
 size = Vector2( 700, 200 )
 transparent_bg = true
 
-[node name="Label" type="Label" parent="Words/Portfolio/Viewport"]
+[node name="Portfolio" type="Sprite3D" parent="Words/ViewportPortfolio"]
+transform = Transform( -15, 2.26494e-06, -9.90035e-14, 0, -6.55671e-07, -15, -2.26494e-06, -15, 6.55671e-07, -60, 0.101, -185.284 )
+texture = SubResource( 21 )
+
+[node name="Label" type="Label" parent="Words/ViewportPortfolio"]
 margin_right = 100.0
 margin_bottom = 120.0
 custom_fonts/font = SubResource( 8 )
@@ -235,15 +235,15 @@ https://ramanusabakti.itch.io"
 align = 1
 valign = 1
 
-[node name="My Projects" type="Sprite3D" parent="Words"]
-transform = Transform( -8.74228e-07, -20, 8.74228e-07, 0, -8.74228e-07, -20, 20, -8.74228e-07, 3.82137e-14, -41.2652, 0.001, -85.9638 )
-texture = SubResource( 12 )
-
-[node name="Viewport" type="Viewport" parent="Words/My Projects"]
+[node name="ViewportProjects" type="Viewport" parent="Words"]
 size = Vector2( 280, 100 )
 transparent_bg = true
 
-[node name="Label" type="Label" parent="Words/My Projects/Viewport"]
+[node name="My Projects" type="Sprite3D" parent="Words/ViewportProjects"]
+transform = Transform( -8.74228e-07, -20, 8.74228e-07, 0, -8.74228e-07, -20, 20, -8.74228e-07, 3.82137e-14, -41.2652, 0.101, -85.9638 )
+texture = SubResource( 22 )
+
+[node name="Label" type="Label" parent="Words/ViewportProjects"]
 margin_right = 100.0
 margin_bottom = 120.0
 custom_fonts/font = SubResource( 8 )
@@ -260,10 +260,10 @@ script = ExtResource( 8 )
 [node name="Arrow" type="HBoxContainer" parent="UI"]
 anchor_top = 1.0
 anchor_bottom = 1.0
-margin_left = 21.0
-margin_top = -135.0
-margin_right = 306.0
-margin_bottom = -31.0
+margin_top = -200.0
+margin_right = 285.0
+margin_bottom = -96.0
+rect_scale = Vector2( 1.5, 1.5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -281,10 +281,11 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -130.0
-margin_top = -415.0
-margin_right = -30.0
-margin_bottom = -31.0
+margin_left = -200.0
+margin_top = -625.0
+margin_right = -100.0
+margin_bottom = -241.0
+rect_scale = Vector2( 1.5, 1.5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

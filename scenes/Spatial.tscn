@@ -252,7 +252,6 @@ align = 1
 valign = 1
 
 [node name="Social Media" parent="Words" instance=ExtResource( 33 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -91.684, 0, -44.6517 )
 
 [node name="UI" type="Node" parent="."]
 script = ExtResource( 8 )

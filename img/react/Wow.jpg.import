@@ -4,15 +4,16 @@ importer="texture"
 type="StreamTexture"
 path.s3tc="res://.import/Wow.jpg-ff793663ad54b5ddcea81f99840229cc.s3tc.stex"
 path.etc2="res://.import/Wow.jpg-ff793663ad54b5ddcea81f99840229cc.etc2.stex"
+path.etc="res://.import/Wow.jpg-ff793663ad54b5ddcea81f99840229cc.etc.stex"
 metadata={
-"imported_formats": [ "s3tc", "etc2" ],
+"imported_formats": [ "s3tc", "etc2", "etc" ],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://img/react/Wow.jpg"
-dest_files=[ "res://.import/Wow.jpg-ff793663ad54b5ddcea81f99840229cc.s3tc.stex", "res://.import/Wow.jpg-ff793663ad54b5ddcea81f99840229cc.etc2.stex" ]
+dest_files=[ "res://.import/Wow.jpg-ff793663ad54b5ddcea81f99840229cc.s3tc.stex", "res://.import/Wow.jpg-ff793663ad54b5ddcea81f99840229cc.etc2.stex", "res://.import/Wow.jpg-ff793663ad54b5ddcea81f99840229cc.etc.stex" ]
 
 [params]
 

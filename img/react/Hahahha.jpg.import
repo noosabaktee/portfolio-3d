@@ -4,15 +4,16 @@ importer="texture"
 type="StreamTexture"
 path.s3tc="res://.import/Hahahha.jpg-35dbdc5dd9d24f69712f11880dac7dfd.s3tc.stex"
 path.etc2="res://.import/Hahahha.jpg-35dbdc5dd9d24f69712f11880dac7dfd.etc2.stex"
+path.etc="res://.import/Hahahha.jpg-35dbdc5dd9d24f69712f11880dac7dfd.etc.stex"
 metadata={
-"imported_formats": [ "s3tc", "etc2" ],
+"imported_formats": [ "s3tc", "etc2", "etc" ],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://img/react/Hahahha.jpg"
-dest_files=[ "res://.import/Hahahha.jpg-35dbdc5dd9d24f69712f11880dac7dfd.s3tc.stex", "res://.import/Hahahha.jpg-35dbdc5dd9d24f69712f11880dac7dfd.etc2.stex" ]
+dest_files=[ "res://.import/Hahahha.jpg-35dbdc5dd9d24f69712f11880dac7dfd.s3tc.stex", "res://.import/Hahahha.jpg-35dbdc5dd9d24f69712f11880dac7dfd.etc2.stex", "res://.import/Hahahha.jpg-35dbdc5dd9d24f69712f11880dac7dfd.etc.stex" ]
 
 [params]
 

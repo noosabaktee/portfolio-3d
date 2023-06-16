@@ -4,15 +4,16 @@ importer="texture"
 type="StreamTexture"
 path.s3tc="res://.import/fb.png-e92a19ece50f765ce32ec6660af1a5ac.s3tc.stex"
 path.etc2="res://.import/fb.png-e92a19ece50f765ce32ec6660af1a5ac.etc2.stex"
+path.etc="res://.import/fb.png-e92a19ece50f765ce32ec6660af1a5ac.etc.stex"
 metadata={
-"imported_formats": [ "s3tc", "etc2" ],
+"imported_formats": [ "s3tc", "etc2", "etc" ],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://img/Social/fb.png"
-dest_files=[ "res://.import/fb.png-e92a19ece50f765ce32ec6660af1a5ac.s3tc.stex", "res://.import/fb.png-e92a19ece50f765ce32ec6660af1a5ac.etc2.stex" ]
+dest_files=[ "res://.import/fb.png-e92a19ece50f765ce32ec6660af1a5ac.s3tc.stex", "res://.import/fb.png-e92a19ece50f765ce32ec6660af1a5ac.etc2.stex", "res://.import/fb.png-e92a19ece50f765ce32ec6660af1a5ac.etc.stex" ]
 
 [params]
 

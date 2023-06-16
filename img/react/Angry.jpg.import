@@ -4,15 +4,16 @@ importer="texture"
 type="StreamTexture"
 path.s3tc="res://.import/Angry.jpg-05c93459b39489c62984d4276d364aa7.s3tc.stex"
 path.etc2="res://.import/Angry.jpg-05c93459b39489c62984d4276d364aa7.etc2.stex"
+path.etc="res://.import/Angry.jpg-05c93459b39489c62984d4276d364aa7.etc.stex"
 metadata={
-"imported_formats": [ "s3tc", "etc2" ],
+"imported_formats": [ "s3tc", "etc2", "etc" ],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://img/react/Angry.jpg"
-dest_files=[ "res://.import/Angry.jpg-05c93459b39489c62984d4276d364aa7.s3tc.stex", "res://.import/Angry.jpg-05c93459b39489c62984d4276d364aa7.etc2.stex" ]
+dest_files=[ "res://.import/Angry.jpg-05c93459b39489c62984d4276d364aa7.s3tc.stex", "res://.import/Angry.jpg-05c93459b39489c62984d4276d364aa7.etc2.stex", "res://.import/Angry.jpg-05c93459b39489c62984d4276d364aa7.etc.stex" ]
 
 [params]
 

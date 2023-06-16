@@ -4,15 +4,16 @@ importer="texture"
 type="StreamTexture"
 path.s3tc="res://.import/db.png-35e1b14dfd5c914e46adb392fd47423a.s3tc.stex"
 path.etc2="res://.import/db.png-35e1b14dfd5c914e46adb392fd47423a.etc2.stex"
+path.etc="res://.import/db.png-35e1b14dfd5c914e46adb392fd47423a.etc.stex"
 metadata={
-"imported_formats": [ "s3tc", "etc2" ],
+"imported_formats": [ "s3tc", "etc2", "etc" ],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://img/Social/db.png"
-dest_files=[ "res://.import/db.png-35e1b14dfd5c914e46adb392fd47423a.s3tc.stex", "res://.import/db.png-35e1b14dfd5c914e46adb392fd47423a.etc2.stex" ]
+dest_files=[ "res://.import/db.png-35e1b14dfd5c914e46adb392fd47423a.s3tc.stex", "res://.import/db.png-35e1b14dfd5c914e46adb392fd47423a.etc2.stex", "res://.import/db.png-35e1b14dfd5c914e46adb392fd47423a.etc.stex" ]
 
 [params]
 

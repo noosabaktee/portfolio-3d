@@ -36,7 +36,6 @@ onready var bata = get_parent().get_node("Sound/Bata")
 
 var las_velocity = 0
 var last_move = 0 #1 = maju, 2= mundur
-var info = ""
 var canPlayCrashSound = true
 var canPlayCrashSound2 = true
 var canPlayBrakeSound = true
@@ -134,8 +133,5 @@ func _on_Area_body_entered(body):
 				canPlayCrashSound = true	
 #	elif body is RigidBody:
 #		bata.play()
-#		if body.name == "Plane":
-#			crash2.play()
-#		else:
-#			crash.play()
+		
 

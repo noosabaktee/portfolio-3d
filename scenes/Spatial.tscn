@@ -379,15 +379,19 @@ transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -101.204, 0, 0 )
 
 [node name="Bowling Pin" parent="Playground/Bowling" instance=ExtResource( 13 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25.9932, 1.79952, 0 )
+mass = 10.0
 
 [node name="Bowling Pin2" parent="Playground/Bowling" instance=ExtResource( 13 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -28, 1.8, 4 )
+mass = 10.0
 
 [node name="Bowling Pin3" parent="Playground/Bowling" instance=ExtResource( 13 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 1.8, 0 )
+mass = 10.0
 
 [node name="Bowling Pin4" parent="Playground/Bowling" instance=ExtResource( 13 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -28, 1.8, -4 )
+mass = 10.0
 
 [node name="Ajlengan Big" parent="Playground" instance=ExtResource( 15 )]
 transform = Transform( 2, 0, 0, 0, 0.845236, -1.81262, 0, 1.81262, 0.845236, -123.866, 8, 58.9851 )

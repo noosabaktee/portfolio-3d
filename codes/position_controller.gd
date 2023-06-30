@@ -33,3 +33,4 @@ func reset():
 	car.transform = firstPosition
 	car.linear_velocity = Vector3() 
 
+

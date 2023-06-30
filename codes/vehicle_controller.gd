@@ -131,7 +131,12 @@ func _on_Area_body_entered(body):
 				yield(t, "timeout")
 				t.queue_free()	
 				canPlayCrashSound = true	
-#	elif body is RigidBody:
-#		bata.play()
+	elif body is RigidBody and body.get_collision_layer() == 9 and body.collide == false:
+		print(body.get_collision_layer())
+		bata.play()
+		body.collide = true
 		
 
+func _on_Area_body_exited(body):
+	if body is RigidBody and body.get_collision_layer() == 9 and body.collide == true:
+		body.collide = false

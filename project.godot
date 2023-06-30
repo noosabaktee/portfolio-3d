@@ -11,8 +11,9 @@ config_version=4
 [application]
 
 config/name="Portfolio 3D"
-run/main_scene="res://scenes/Splash.tscn"
+run/main_scene="res://scenes/Spatial.tscn"
 config/icon="res://img/Rama.png"
+run/size/height=700
 
 [autoload]
 
@@ -20,8 +21,8 @@ Variables="*res://codes/variables.gd"
 
 [display]
 
-window/size/width=1200
-window/size/height=700
+window/size/width=1000
+window/size/height=500
 
 [input_devices]
 
@@ -32,6 +33,7 @@ pointing/emulate_touch_from_mouse=true
 3d_physics/layer_1="Kinematic"
 3d_physics/layer_2="Rigidbody"
 3d_physics/layer_3="Player"
+3d_physics/layer_4="Bata"
 
 [physics]
 

@@ -202,3 +202,4 @@ stream = ExtResource( 7 )
 volume_db = 20.0
 
 [connection signal="body_entered" from="VehicleBody/Area" to="VehicleBody" method="_on_Area_body_entered"]
+[connection signal="body_exited" from="VehicleBody/Area" to="VehicleBody" method="_on_Area_body_exited"]

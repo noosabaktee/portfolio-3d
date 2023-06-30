@@ -1,4 +1,6 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://codes/Bata.gd" type="Script" id=1]
 
 [sub_resource type="BoxShape" id=1]
 
@@ -8,7 +10,9 @@
 
 [node name="RigidBody" type="RigidBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+collision_layer = 9
 gravity_scale = 9.8
+script = ExtResource( 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="RigidBody"]
 transform = Transform( 0.5, 0, 0, 0, 1, 0, 0, 0, 2, 0, 0, 0 )
@@ -21,7 +25,9 @@ material/0 = null
 
 [node name="RigidBody2" type="RigidBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 5 )
+collision_layer = 9
 gravity_scale = 9.8
+script = ExtResource( 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="RigidBody2"]
 transform = Transform( 0.5, 0, 0, 0, 1, 0, 0, 0, 2, 0, 0, 0 )
@@ -34,7 +40,9 @@ material/0 = null
 
 [node name="RigidBody3" type="RigidBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -5 )
+collision_layer = 9
 gravity_scale = 9.8
+script = ExtResource( 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="RigidBody3"]
 transform = Transform( 0.5, 0, 0, 0, 1, 0, 0, 0, 2, 0, 0, 0 )
@@ -47,7 +55,9 @@ material/0 = null
 
 [node name="RigidBody4" type="RigidBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -10 )
+collision_layer = 9
 gravity_scale = 9.8
+script = ExtResource( 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="RigidBody4"]
 transform = Transform( 0.5, 0, 0, 0, 1, 0, 0, 0, 2, 0, 0, 0 )
@@ -60,7 +70,9 @@ material/0 = null
 
 [node name="RigidBody5" type="RigidBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 10 )
+collision_layer = 9
 gravity_scale = 9.8
+script = ExtResource( 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="RigidBody5"]
 transform = Transform( 0.5, 0, 0, 0, 1, 0, 0, 0, 2, 0, 0, 0 )
@@ -73,7 +85,9 @@ material/0 = null
 
 [node name="RigidBody6" type="RigidBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 7.5 )
+collision_layer = 9
 gravity_scale = 9.8
+script = ExtResource( 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="RigidBody6"]
 transform = Transform( 0.5, 0, 0, 0, 1, 0, 0, 0, 2, 0, 0, 0 )
@@ -86,7 +100,9 @@ material/0 = null
 
 [node name="RigidBody7" type="RigidBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 2.5 )
+collision_layer = 9
 gravity_scale = 9.8
+script = ExtResource( 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="RigidBody7"]
 transform = Transform( 0.5, 0, 0, 0, 1, 0, 0, 0, 2, 0, 0, 0 )
@@ -99,7 +115,9 @@ material/0 = null
 
 [node name="RigidBody8" type="RigidBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -2.5 )
+collision_layer = 9
 gravity_scale = 9.8
+script = ExtResource( 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="RigidBody8"]
 transform = Transform( 0.5, 0, 0, 0, 1, 0, 0, 0, 2, 0, 0, 0 )
@@ -112,7 +130,9 @@ material/0 = null
 
 [node name="RigidBody9" type="RigidBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -7.5 )
+collision_layer = 9
 gravity_scale = 9.8
+script = ExtResource( 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="RigidBody9"]
 transform = Transform( 0.5, 0, 0, 0, 1, 0, 0, 0, 2, 0, 0, 0 )
@@ -125,7 +145,9 @@ material/0 = null
 
 [node name="RigidBody10" type="RigidBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, -5 )
+collision_layer = 9
 gravity_scale = 9.8
+script = ExtResource( 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="RigidBody10"]
 transform = Transform( 0.5, 0, 0, 0, 1, 0, 0, 0, 2, 0, 0, 0 )
@@ -138,7 +160,9 @@ material/0 = null
 
 [node name="RigidBody11" type="RigidBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0 )
+collision_layer = 9
 gravity_scale = 9.8
+script = ExtResource( 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="RigidBody11"]
 transform = Transform( 0.5, 0, 0, 0, 1, 0, 0, 0, 2, 0, 0, 0 )
@@ -151,7 +175,9 @@ material/0 = null
 
 [node name="RigidBody12" type="RigidBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 5 )
+collision_layer = 9
 gravity_scale = 9.8
+script = ExtResource( 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="RigidBody12"]
 transform = Transform( 0.5, 0, 0, 0, 1, 0, 0, 0, 2, 0, 0, 0 )
@@ -164,7 +190,9 @@ material/0 = null
 
 [node name="RigidBody13" type="RigidBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 2.5 )
+collision_layer = 9
 gravity_scale = 9.8
+script = ExtResource( 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="RigidBody13"]
 transform = Transform( 0.5, 0, 0, 0, 1, 0, 0, 0, 2, 0, 0, 0 )
@@ -177,7 +205,9 @@ material/0 = null
 
 [node name="RigidBody14" type="RigidBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, -2.5 )
+collision_layer = 9
 gravity_scale = 9.8
+script = ExtResource( 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="RigidBody14"]
 transform = Transform( 0.5, 0, 0, 0, 1, 0, 0, 0, 2, 0, 0, 0 )
@@ -190,7 +220,9 @@ material/0 = null
 
 [node name="RigidBody15" type="RigidBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9, 0 )
+collision_layer = 9
 gravity_scale = 9.8
+script = ExtResource( 1 )
 
 [node name="CollisionShape" type="CollisionShape" parent="RigidBody15"]
 transform = Transform( 0.5, 0, 0, 0, 1, 0, 0, 0, 2, 0, 0, 0 )

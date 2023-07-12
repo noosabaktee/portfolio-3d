@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=2]
+[gd_scene load_steps=65 format=2]
 
 [ext_resource path="res://codes/Camera.gd" type="Script" id=1]
 [ext_resource path="res://scenes/Vehicle.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://codes/main.gd" type="Script" id=6]
 [ext_resource path="res://ui/A.png" type="Texture" id=7]
 [ext_resource path="res://codes/Controller.gd" type="Script" id=8]
+[ext_resource path="res://img/Kabo.png" type="Texture" id=9]
 [ext_resource path="res://ui/X.png" type="Texture" id=10]
 [ext_resource path="res://3d/Scene/Road.tscn" type="PackedScene" id=11]
 [ext_resource path="res://3d/Scene/Bowling Ball.tscn" type="PackedScene" id=12]
@@ -40,6 +41,14 @@
 [ext_resource path="res://3d/React/Wow.tscn" type="PackedScene" id=39]
 [ext_resource path="res://img/Rama.png" type="Texture" id=40]
 [ext_resource path="res://ui/B.png" type="Texture" id=41]
+[ext_resource path="res://img/Games.png" type="Texture" id=42]
+[ext_resource path="res://img/Rupiah Heroes.png" type="Texture" id=43]
+[ext_resource path="res://img/Nerdle.png" type="Texture" id=44]
+[ext_resource path="res://img/burger.png" type="Texture" id=45]
+[ext_resource path="res://img/godot.png" type="Texture" id=46]
+[ext_resource path="res://img/warning.png" type="Texture" id=47]
+[ext_resource path="res://img/music.png" type="Texture" id=48]
+[ext_resource path="res://img/book.png" type="Texture" id=49]
 
 [sub_resource type="PlaneMesh" id=3]
 
@@ -59,11 +68,29 @@ font_data = ExtResource( 3 )
 [sub_resource type="ViewportTexture" id=20]
 viewport_path = NodePath("Words/ViewportHello")
 
-[sub_resource type="ViewportTexture" id=21]
-viewport_path = NodePath("Words/ViewportPortfolio")
+[sub_resource type="ViewportTexture" id=26]
+viewport_path = NodePath("Words/ViewportGames")
+
+[sub_resource type="ViewportTexture" id=23]
+viewport_path = NodePath("Words/ViewportNerdle")
+
+[sub_resource type="ViewportTexture" id=24]
+viewport_path = NodePath("Words/ViewportKabo")
+
+[sub_resource type="ViewportTexture" id=25]
+viewport_path = NodePath("Words/ViewportHeroes")
 
 [sub_resource type="ViewportTexture" id=22]
 viewport_path = NodePath("Words/ViewportProjects")
+
+[sub_resource type="ViewportTexture" id=29]
+viewport_path = NodePath("Words/ViewportPelan")
+
+[sub_resource type="ViewportTexture" id=28]
+viewport_path = NodePath("Words/ViewportMade")
+
+[sub_resource type="ViewportTexture" id=27]
+viewport_path = NodePath("Words/ViewportFood")
 
 [sub_resource type="DynamicFont" id=16]
 size = 20
@@ -218,20 +245,71 @@ years old.
 "
 valign = 1
 
-[node name="ViewportPortfolio" type="Viewport" parent="Words"]
+[node name="ViewportGames" type="Viewport" parent="Words"]
 size = Vector2( 700, 200 )
 transparent_bg = true
 
-[node name="Portfolio" type="Sprite3D" parent="Words/ViewportPortfolio"]
-transform = Transform( -15, 2.26494e-06, -9.90035e-14, 0, -6.55671e-07, -15, -2.26494e-06, -15, 6.55671e-07, -60, 0.101, -185.284 )
-texture = SubResource( 21 )
+[node name="Portfolio" type="Sprite3D" parent="Words/ViewportGames"]
+transform = Transform( -6.06218, -3.5, 1.5299e-07, 0, -3.0598e-07, -7, 3.5, -6.06218, 2.64986e-07, 6.192, 0.101, -152.538 )
+texture = SubResource( 26 )
 
-[node name="Label" type="Label" parent="Words/ViewportPortfolio"]
+[node name="Label" type="Label" parent="Words/ViewportGames"]
 margin_right = 100.0
 margin_bottom = 120.0
 custom_fonts/font = SubResource( 8 )
-text = "See more at
+text = "My Games
 https://ramanusabakti.itch.io"
+align = 1
+valign = 1
+
+[node name="ViewportNerdle" type="Viewport" parent="Words"]
+size = Vector2( 700, 200 )
+transparent_bg = true
+
+[node name="Portfolio" type="Sprite3D" parent="Words/ViewportNerdle"]
+transform = Transform( -6.06218, -3.5, 1.5299e-07, 0, -3.0598e-07, -7, 3.5, -6.06218, 2.64986e-07, -34.6919, 0.101, -151.729 )
+texture = SubResource( 23 )
+
+[node name="Label" type="Label" parent="Words/ViewportNerdle"]
+margin_right = 100.0
+margin_bottom = 120.0
+custom_fonts/font = SubResource( 8 )
+text = "Nerdle
+https://neerdle.netlify.app"
+align = 1
+valign = 1
+
+[node name="ViewportKabo" type="Viewport" parent="Words"]
+size = Vector2( 700, 200 )
+transparent_bg = true
+
+[node name="Portfolio" type="Sprite3D" parent="Words/ViewportKabo"]
+transform = Transform( -6.06218, -3.5, 1.5299e-07, 0, -3.0598e-07, -7, 3.5, -6.06218, 2.64986e-07, -102.056, 0.101, -150.318 )
+texture = SubResource( 24 )
+
+[node name="Label" type="Label" parent="Words/ViewportKabo"]
+margin_right = 100.0
+margin_bottom = 120.0
+custom_fonts/font = SubResource( 8 )
+text = "Kabo
+https://kabo.vercel.app"
+align = 1
+valign = 1
+
+[node name="ViewportHeroes" type="Viewport" parent="Words"]
+size = Vector2( 700, 200 )
+transparent_bg = true
+
+[node name="Portfolio" type="Sprite3D" parent="Words/ViewportHeroes"]
+transform = Transform( -6.06218, -3.5, 1.5299e-07, 0, -3.0598e-07, -7, 3.5, -6.06218, 2.64986e-07, -137.762, 0.101, -151.028 )
+texture = SubResource( 25 )
+
+[node name="Label" type="Label" parent="Words/ViewportHeroes"]
+margin_right = 100.0
+margin_bottom = 120.0
+custom_fonts/font = SubResource( 8 )
+text = "Rupiah Heroes
+https://kabo.vercel.app"
 align = 1
 valign = 1
 
@@ -250,6 +328,74 @@ custom_fonts/font = SubResource( 8 )
 text = "<- My Projects"
 align = 1
 valign = 1
+
+[node name="ViewportPelan" type="Viewport" parent="Words"]
+size = Vector2( 400, 100 )
+transparent_bg = true
+
+[node name="My Projects" type="Sprite3D" parent="Words/ViewportPelan"]
+transform = Transform( -8.74228e-07, -20, 8.74228e-07, 0, -8.74228e-07, -20, 20, -8.74228e-07, 3.82137e-14, -229.489, 0.101, 2.29532 )
+texture = SubResource( 29 )
+
+[node name="Label" type="Label" parent="Words/ViewportPelan"]
+margin_right = 100.0
+margin_bottom = 120.0
+custom_fonts/font = SubResource( 8 )
+text = "Pelan-Pelan Pak Sopir"
+align = 1
+valign = 1
+
+[node name="Sprite3D" type="Sprite3D" parent="Words/ViewportPelan"]
+transform = Transform( -4.37114e-07, 10, 0, 4.37114e-07, 1.91069e-14, -10, -10, -4.37114e-07, -4.37114e-07, -249.245, 0.1, 0 )
+texture = ExtResource( 47 )
+
+[node name="ViewportMade" type="Viewport" parent="Words"]
+size = Vector2( 280, 100 )
+transparent_bg = true
+
+[node name="My Projects" type="Sprite3D" parent="Words/ViewportMade"]
+transform = Transform( -15, -2.26494e-06, 9.90035e-14, 0, -6.55671e-07, -15, 2.26494e-06, -15, 6.55671e-07, -41.2652, 0.101, -189.292 )
+texture = SubResource( 28 )
+
+[node name="Label" type="Label" parent="Words/ViewportMade"]
+margin_right = 100.0
+margin_bottom = 120.0
+custom_fonts/font = SubResource( 8 )
+text = "Made With Godot"
+align = 1
+valign = 1
+
+[node name="Sprite3D" type="Sprite3D" parent="Words/ViewportMade"]
+transform = Transform( 5, 0, 0, 0, -2.18557e-07, -5, 0, 5, -2.18557e-07, -39.326, 0.1, -203.14 )
+texture = ExtResource( 46 )
+
+[node name="ViewportFood" type="Viewport" parent="Words"]
+size = Vector2( 400, 100 )
+transparent_bg = true
+
+[node name="My Projects" type="Sprite3D" parent="Words/ViewportFood"]
+transform = Transform( -20, -3.01992e-06, 1.32005e-13, 0, -8.74228e-07, -20, 3.01992e-06, -20, 8.74228e-07, -108.437, 0.101, -19.9106 )
+texture = SubResource( 27 )
+
+[node name="Label" type="Label" parent="Words/ViewportFood"]
+margin_right = 401.0
+margin_bottom = 120.0
+custom_fonts/font = SubResource( 8 )
+text = "Food, Music & Book"
+align = 1
+valign = 1
+
+[node name="Food" type="Sprite3D" parent="Words/ViewportFood"]
+transform = Transform( 5, 0, 0, 0, -2.18557e-07, -5, 0, 5, -2.18557e-07, -89.796, 0.1, -35.6713 )
+texture = ExtResource( 45 )
+
+[node name="Music" type="Sprite3D" parent="Words/ViewportFood"]
+transform = Transform( 5, 0, 0, 0, -2.18557e-07, -5, 0, 5, -2.18557e-07, -107.125, 0.1, -35.6713 )
+texture = ExtResource( 48 )
+
+[node name="Book" type="Sprite3D" parent="Words/ViewportFood"]
+transform = Transform( 5, 0, 0, 0, -2.18557e-07, -5, 0, 5, -2.18557e-07, -126.056, 0.1, -35.6713 )
+texture = ExtResource( 49 )
 
 [node name="Social Media" parent="Words" instance=ExtResource( 33 )]
 
@@ -372,6 +518,9 @@ transform = Transform( 2.29813, 0, 1.28558, 0, 2, 0, -1.92836, 0, 1.53209, 61.21
 
 [node name="Playground" type="Node" parent="."]
 
+[node name="Rubik" parent="Playground" instance=ExtResource( 26 )]
+transform = Transform( 1.41421, 0, 1.41421, 0, 2, 0, -1.41421, 0, 1.41421, 32.3107, 0, -69.6782 )
+
 [node name="Bowling" type="Spatial" parent="Playground"]
 transform = Transform( 1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -101.204, 0, 0 )
 
@@ -406,7 +555,7 @@ transform = Transform( 1.06066, 0, 1.06066, 0, 1.5, 0, -1.06066, 0, 1.06066, -44
 transform = Transform( 2, 0, -2.59808, 0, 4, 0, 3.4641, 0, 1.5, -104.677, 0, -101.162 )
 
 [node name="Leopard" parent="Playground" instance=ExtResource( 19 )]
-transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, -236.343, 0, -43.1343 )
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, -236.343, 0, -63.7459 )
 
 [node name="Bata-bata" type="Spatial" parent="Playground"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -217.636, 0, 0 )
@@ -445,20 +594,21 @@ transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 2.5, 0 )
 
 [node name="Portfolio" type="Node" parent="."]
 
-[node name="Rubik" parent="Portfolio" instance=ExtResource( 26 )]
-transform = Transform( 1.41421, 0, 1.41421, 0, 2, 0, -1.41421, 0, 1.41421, 32.3107, 0, -69.6782 )
-
-[node name="Board" parent="Portfolio" instance=ExtResource( 25 )]
+[node name="Kabo" parent="Portfolio" instance=ExtResource( 25 )]
 transform = Transform( -0.69282, 0, -0.4, 0, 0.8, 0, 0.4, 0, -0.69282, -85, -1.2, -145.237 )
+image = ExtResource( 9 )
 
-[node name="Board2" parent="Portfolio" instance=ExtResource( 25 )]
+[node name="Rupiah" parent="Portfolio" instance=ExtResource( 25 )]
 transform = Transform( -0.69282, 0, -0.4, 0, 0.8, 0, 0.4, 0, -0.69282, -120, -1.2, -145.237 )
+image = ExtResource( 43 )
 
-[node name="Board3" parent="Portfolio" instance=ExtResource( 25 )]
-transform = Transform( -0.69282, 0, -0.4, 0, 0.8, 0, 0.4, 0, -0.69282, 15.4644, -1.2, -145.237 )
+[node name="Games" parent="Portfolio" instance=ExtResource( 25 )]
+transform = Transform( -0.69282, 0, -0.4, 0, 0.8, 0, 0.4, 0, -0.69282, 18.9256, -1.2, -144.761 )
+image = ExtResource( 42 )
 
-[node name="Board4" parent="Portfolio" instance=ExtResource( 25 )]
+[node name="Nerdle" parent="Portfolio" instance=ExtResource( 25 )]
 transform = Transform( -0.69282, 0, -0.4, 0, 0.8, 0, 0.4, 0, -0.69282, -19.5356, -1.2, -145.237 )
+image = ExtResource( 44 )
 
 [node name="Tree and Rock" type="Node" parent="."]
 

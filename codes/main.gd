@@ -35,4 +35,4 @@ func _process(delta):
 
 func _on_close_pressed():
 	closeDown = true
-	print("click")
+

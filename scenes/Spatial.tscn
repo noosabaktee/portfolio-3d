@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=2]
+[gd_scene load_steps=67 format=2]
 
 [ext_resource path="res://codes/Camera.gd" type="Script" id=1]
 [ext_resource path="res://scenes/Vehicle.tscn" type="PackedScene" id=2]
@@ -49,6 +49,7 @@
 [ext_resource path="res://img/warning.png" type="Texture" id=47]
 [ext_resource path="res://img/music.png" type="Texture" id=48]
 [ext_resource path="res://img/book.png" type="Texture" id=49]
+[ext_resource path="res://img/keyboard.png" type="Texture" id=50]
 
 [sub_resource type="PlaneMesh" id=3]
 
@@ -85,6 +86,9 @@ viewport_path = NodePath("Words/ViewportProjects")
 
 [sub_resource type="ViewportTexture" id=29]
 viewport_path = NodePath("Words/ViewportPelan")
+
+[sub_resource type="ViewportTexture" id=30]
+viewport_path = NodePath("Words/ViewportKeyboard")
 
 [sub_resource type="ViewportTexture" id=28]
 viewport_path = NodePath("Words/ViewportMade")
@@ -222,7 +226,7 @@ texture = SubResource( 19 )
 margin_right = 100.0
 margin_bottom = 120.0
 custom_fonts/font = SubResource( 8 )
-text = "About me ->"
+text = "About me"
 align = 1
 valign = 1
 
@@ -250,7 +254,7 @@ size = Vector2( 700, 200 )
 transparent_bg = true
 
 [node name="Portfolio" type="Sprite3D" parent="Words/ViewportGames"]
-transform = Transform( -6.06218, -3.5, 1.5299e-07, 0, -3.0598e-07, -7, 3.5, -6.06218, 2.64986e-07, 6.192, 0.101, -152.538 )
+transform = Transform( -6.06218, -3.5, 1.5299e-07, 0, -3.0598e-07, -7, 3.5, -6.06218, 2.64986e-07, -1.73641, 0.101, -167.609 )
 texture = SubResource( 26 )
 
 [node name="Label" type="Label" parent="Words/ViewportGames"]
@@ -258,8 +262,9 @@ margin_right = 100.0
 margin_bottom = 120.0
 custom_fonts/font = SubResource( 8 )
 text = "My Games
-https://ramanusabakti.itch.io"
-align = 1
+See more my games that you 
+can play
+www.ramanusabakti.itch.io"
 valign = 1
 
 [node name="ViewportNerdle" type="Viewport" parent="Words"]
@@ -267,7 +272,7 @@ size = Vector2( 700, 200 )
 transparent_bg = true
 
 [node name="Portfolio" type="Sprite3D" parent="Words/ViewportNerdle"]
-transform = Transform( -6.06218, -3.5, 1.5299e-07, 0, -3.0598e-07, -7, 3.5, -6.06218, 2.64986e-07, -34.6919, 0.101, -151.729 )
+transform = Transform( -6.06218, -3.5, 1.5299e-07, 0, -3.0598e-07, -7, 3.5, -6.06218, 2.64986e-07, -42.7873, 0.101, -164.243 )
 texture = SubResource( 23 )
 
 [node name="Label" type="Label" parent="Words/ViewportNerdle"]
@@ -275,16 +280,17 @@ margin_right = 100.0
 margin_bottom = 120.0
 custom_fonts/font = SubResource( 8 )
 text = "Nerdle
-https://neerdle.netlify.app"
-align = 1
+The wordle game uses numbers 
+and thinks about calculations
+www.neerdle.netlify.app"
 valign = 1
 
 [node name="ViewportKabo" type="Viewport" parent="Words"]
-size = Vector2( 700, 200 )
+size = Vector2( 700, 250 )
 transparent_bg = true
 
 [node name="Portfolio" type="Sprite3D" parent="Words/ViewportKabo"]
-transform = Transform( -6.06218, -3.5, 1.5299e-07, 0, -3.0598e-07, -7, 3.5, -6.06218, 2.64986e-07, -102.056, 0.101, -150.318 )
+transform = Transform( -6.06218, -3.5, 1.5299e-07, 0, -3.0598e-07, -7, 3.5, -6.06218, 2.64986e-07, -105.507, 0.101, -165.099 )
 texture = SubResource( 24 )
 
 [node name="Label" type="Label" parent="Words/ViewportKabo"]
@@ -292,16 +298,18 @@ margin_right = 100.0
 margin_bottom = 120.0
 custom_fonts/font = SubResource( 8 )
 text = "Kabo
-https://kabo.vercel.app"
-align = 1
+Smart robots that use 
+Artificial intelligence 
+that can interact with you
+www.kabo.vercel.app"
 valign = 1
 
 [node name="ViewportHeroes" type="Viewport" parent="Words"]
-size = Vector2( 700, 200 )
+size = Vector2( 700, 250 )
 transparent_bg = true
 
 [node name="Portfolio" type="Sprite3D" parent="Words/ViewportHeroes"]
-transform = Transform( -6.06218, -3.5, 1.5299e-07, 0, -3.0598e-07, -7, 3.5, -6.06218, 2.64986e-07, -137.762, 0.101, -151.028 )
+transform = Transform( -6.06218, -3.5, 1.5299e-07, 0, -3.0598e-07, -7, 3.5, -6.06218, 2.64986e-07, -142.609, 0.101, -164.131 )
 texture = SubResource( 25 )
 
 [node name="Label" type="Label" parent="Words/ViewportHeroes"]
@@ -309,8 +317,10 @@ margin_right = 100.0
 margin_bottom = 120.0
 custom_fonts/font = SubResource( 8 )
 text = "Rupiah Heroes
-https://kabo.vercel.app"
-align = 1
+Scan your rupiah to get 
+each hero's Rupiah card 
+and collect it
+www.rupiah-heroes.netlify.app"
 valign = 1
 
 [node name="ViewportProjects" type="Viewport" parent="Words"]
@@ -325,7 +335,7 @@ texture = SubResource( 22 )
 margin_right = 100.0
 margin_bottom = 120.0
 custom_fonts/font = SubResource( 8 )
-text = "<- My Projects"
+text = "My Projects"
 align = 1
 valign = 1
 
@@ -348,6 +358,27 @@ valign = 1
 [node name="Sprite3D" type="Sprite3D" parent="Words/ViewportPelan"]
 transform = Transform( -4.37114e-07, 10, 0, 4.37114e-07, 1.91069e-14, -10, -10, -4.37114e-07, -4.37114e-07, -249.245, 0.1, 0 )
 texture = ExtResource( 47 )
+
+[node name="ViewportKeyboard" type="Viewport" parent="Words"]
+size = Vector2( 400, 100 )
+transparent_bg = true
+
+[node name="My Projects" type="Sprite3D" parent="Words/ViewportKeyboard"]
+transform = Transform( -10, -1.50996e-06, 6.60024e-14, 0, -4.37114e-07, -10, 1.50996e-06, -10, 4.37114e-07, 71.1312, 0.101, 5.32643 )
+texture = SubResource( 30 )
+
+[node name="Label" type="Label" parent="Words/ViewportKeyboard"]
+margin_right = 100.0
+margin_bottom = 120.0
+custom_fonts/font = SubResource( 8 )
+text = "Use your keyboard 
+to move around"
+align = 1
+valign = 1
+
+[node name="Sprite3D" type="Sprite3D" parent="Words/ViewportKeyboard"]
+transform = Transform( 5, 0, 0, 0, -2.18557e-07, -5, 0, 5, -2.18557e-07, 73.4435, 0.1, -5.2703 )
+texture = ExtResource( 50 )
 
 [node name="ViewportMade" type="Viewport" parent="Words"]
 size = Vector2( 280, 100 )

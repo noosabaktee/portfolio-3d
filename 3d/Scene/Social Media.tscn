@@ -27,6 +27,22 @@ viewport_path = NodePath("ViewportFB")
 
 [node name="Social Media" type="Spatial"]
 
+[node name="DBlogo" type="Sprite3D" parent="."]
+transform = Transform( -2, 1.74846e-07, -4.37114e-08, -8.74228e-08, 0, 1, 1.74846e-07, 2, 3.55271e-15, 6, 0.1, 0 )
+texture = ExtResource( 5 )
+
+[node name="FBlogo" type="Sprite3D" parent="."]
+transform = Transform( -2, 1.74846e-07, -4.37114e-08, -8.74228e-08, 3.82137e-15, 1, 1.74846e-07, 2, 1.91069e-15, 6, 0.1, -12 )
+texture = ExtResource( 2 )
+
+[node name="TWlogo" type="Sprite3D" parent="."]
+transform = Transform( -2, 1.74846e-07, -4.37114e-08, -8.74228e-08, 3.82137e-15, 1, 1.74846e-07, 2, 1.91069e-15, 6, 0.1, -6 )
+texture = ExtResource( 4 )
+
+[node name="IGlogo" type="Sprite3D" parent="."]
+transform = Transform( -2, 1.74846e-07, -4.37114e-08, -8.74228e-08, 0, 1, 1.74846e-07, 2, 3.55271e-15, 6, 0.1, 6 )
+texture = ExtResource( 3 )
+
 [node name="ViewportFollow" type="Viewport" parent="."]
 size = Vector2( 280, 100 )
 transparent_bg = true
@@ -51,10 +67,6 @@ transparent_bg = true
 transform = Transform( -10, -1.50996e-06, 0, 2.84217e-14, -4.37114e-07, -10, 1.50996e-06, -10, 4.37114e-07, -12, 0.1, 7.24282 )
 texture = SubResource( 14 )
 
-[node name="IGlogo" type="Sprite3D" parent="ViewportIG"]
-transform = Transform( -2, 1.74846e-07, -4.37114e-08, -8.74228e-08, 0, 1, 1.74846e-07, 2, 3.55271e-15, 6, 0.1, 6 )
-texture = ExtResource( 3 )
-
 [node name="Label" type="Label" parent="ViewportIG"]
 margin_right = 240.0
 margin_bottom = 120.0
@@ -75,10 +87,6 @@ text = "/ramanusabakti"
 align = 1
 valign = 1
 
-[node name="DBlogo" type="Sprite3D" parent="ViewportDB"]
-transform = Transform( -2, 1.74846e-07, -4.37114e-08, -8.74228e-08, 0, 1, 1.74846e-07, 2, 3.55271e-15, 6, 0.1, 0 )
-texture = ExtResource( 5 )
-
 [node name="db" type="Sprite3D" parent="ViewportDB"]
 transform = Transform( -10, -1.50996e-06, 0, 2.84217e-14, -4.37114e-07, -10, 1.50996e-06, -10, 4.37114e-07, -12, 0.1, 0.477242 )
 texture = SubResource( 15 )
@@ -86,10 +94,6 @@ texture = SubResource( 15 )
 [node name="ViewportTW" type="Viewport" parent="."]
 size = Vector2( 280, 100 )
 transparent_bg = true
-
-[node name="TWlogo" type="Sprite3D" parent="ViewportTW"]
-transform = Transform( -2, 1.74846e-07, -4.37114e-08, -8.74228e-08, 3.82137e-15, 1, 1.74846e-07, 2, 1.91069e-15, 6, 0.1, -6 )
-texture = ExtResource( 4 )
 
 [node name="tw" type="Sprite3D" parent="ViewportTW"]
 transform = Transform( -10, -1.50996e-06, 0, 2.84217e-14, -4.37114e-07, -10, 1.50996e-06, -10, 4.37114e-07, -12, 0.1, -5.44026 )
@@ -106,10 +110,6 @@ valign = 1
 [node name="ViewportFB" type="Viewport" parent="."]
 size = Vector2( 280, 100 )
 transparent_bg = true
-
-[node name="FBlogo" type="Sprite3D" parent="ViewportFB"]
-transform = Transform( -2, 1.74846e-07, -4.37114e-08, -8.74228e-08, 3.82137e-15, 1, 1.74846e-07, 2, 1.91069e-15, 6, 0.1, -12 )
-texture = ExtResource( 2 )
 
 [node name="fb" type="Sprite3D" parent="ViewportFB"]
 transform = Transform( -10, -1.50996e-06, 0, 2.84217e-14, -4.37114e-07, -10, 1.50996e-06, -10, 4.37114e-07, -12, 0.1, -11.0551 )

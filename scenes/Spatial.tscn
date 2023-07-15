@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=2]
+[gd_scene load_steps=68 format=2]
 
 [ext_resource path="res://codes/Camera.gd" type="Script" id=1]
 [ext_resource path="res://scenes/Vehicle.tscn" type="PackedScene" id=2]
@@ -68,6 +68,9 @@ font_data = ExtResource( 3 )
 
 [sub_resource type="ViewportTexture" id=20]
 viewport_path = NodePath("Words/ViewportHello")
+
+[sub_resource type="ViewportTexture" id=31]
+viewport_path = NodePath("Words/ViewportLike")
 
 [sub_resource type="ViewportTexture" id=26]
 viewport_path = NodePath("Words/ViewportGames")
@@ -231,22 +234,40 @@ align = 1
 valign = 1
 
 [node name="ViewportHello" type="Viewport" parent="Words"]
-size = Vector2( 700, 200 )
+size = Vector2( 600, 220 )
 transparent_bg = true
 
 [node name="Hello" type="Sprite3D" parent="Words/ViewportHello"]
-transform = Transform( -15, 2.26494e-06, -9.90035e-14, 0, -6.55671e-07, -15, -2.26494e-06, -15, 6.55671e-07, 0, 0.101, 116.001 )
+transform = Transform( -15, 2.26494e-06, -9.90035e-14, 0, -6.55671e-07, -15, -2.26494e-06, -15, 6.55671e-07, 0, 0.101, 116.033 )
 texture = SubResource( 20 )
 
 [node name="Label" type="Label" parent="Words/ViewportHello"]
 margin_right = 100.0
 margin_bottom = 120.0
 custom_fonts/font = SubResource( 8 )
-text = "Hello World! I'm Rama Nusa Bakti, 
-a high school student in SMAN 1 
-Jatisari, Karawang. I'm seventeen
-years old. 
+text = "Hi! I'm Rama Nusa Bakti, a student 
+who has a lot of dreams. 
+Like to think about things
+that are important and things
+that are not important
 "
+valign = 1
+
+[node name="ViewportLike" type="Viewport" parent="Words"]
+size = Vector2( 550, 200 )
+transparent_bg = true
+
+[node name="Hello" type="Sprite3D" parent="Words/ViewportLike"]
+transform = Transform( -11.2115, -6.58039, 2.87638e-07, 0, -5.68248e-07, -13, 6.58039, -11.2115, 4.90071e-07, -91.2374, 0.101, 40.8929 )
+texture = SubResource( 31 )
+
+[node name="Label" type="Label" parent="Words/ViewportLike"]
+margin_right = 100.0
+margin_bottom = 120.0
+custom_fonts/font = SubResource( 8 )
+text = "I have many works, 
+many fail but some 
+succeed"
 valign = 1
 
 [node name="ViewportGames" type="Viewport" parent="Words"]

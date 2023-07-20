@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="Portfolio 3D"
-run/main_scene="res://scenes/Spatial.tscn"
+run/main_scene="res://scenes/Splash.tscn"
 config/icon="res://img/Rama.png"
 run/size/height=700
 

@@ -1,6 +1,10 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://3d/obj/Banner.obj" type="ArrayMesh" id=1]
+[ext_resource path="res://img/poster.jpg" type="Texture" id=2]
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_texture = ExtResource( 2 )
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 2.04488, 5.08067, 0.303029 )
@@ -70,7 +74,7 @@ material/56 = null
 material/57 = null
 material/58 = null
 material/59 = null
-material/60 = null
+material/60 = SubResource( 2 )
 material/61 = null
 
 [node name="CollisionShape" type="CollisionShape" parent="."]

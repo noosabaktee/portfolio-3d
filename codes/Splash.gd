@@ -1,5 +1,9 @@
 extends Node2D
-onready var _transition_rect = $SceneTransitionRect
 
-func _on_TouchScreenButton_pressed():
+func _ready():
+	yield(get_tree().create_timer(3.0), "timeout")
+	play()
+
+
+func play():
 	get_tree().change_scene("res://scenes/Spatial.tscn")

@@ -1,9 +1,8 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://font/PixelOperator-Bold.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://img/Social/fb.png" type="Texture" id=2]
+[ext_resource path="res://img/Social/gh.png" type="Texture" id=2]
 [ext_resource path="res://img/Social/ig.png" type="Texture" id=3]
-[ext_resource path="res://img/Social/tw.png" type="Texture" id=4]
 [ext_resource path="res://img/Social/db.png" type="Texture" id=5]
 
 [sub_resource type="ViewportTexture" id=9]
@@ -20,10 +19,7 @@ viewport_path = NodePath("ViewportIG")
 viewport_path = NodePath("ViewportDB")
 
 [sub_resource type="ViewportTexture" id=16]
-viewport_path = NodePath("ViewportTW")
-
-[sub_resource type="ViewportTexture" id=17]
-viewport_path = NodePath("ViewportFB")
+viewport_path = NodePath("ViewportGH")
 
 [node name="Social Media" type="Spatial"]
 
@@ -31,13 +27,9 @@ viewport_path = NodePath("ViewportFB")
 transform = Transform( -2, 1.74846e-07, -4.37114e-08, -8.74228e-08, 0, 1, 1.74846e-07, 2, 3.55271e-15, 6, 0.1, 0 )
 texture = ExtResource( 5 )
 
-[node name="FBlogo" type="Sprite3D" parent="."]
-transform = Transform( -2, 1.74846e-07, -4.37114e-08, -8.74228e-08, 3.82137e-15, 1, 1.74846e-07, 2, 1.91069e-15, 6, 0.1, -12 )
-texture = ExtResource( 2 )
-
-[node name="TWlogo" type="Sprite3D" parent="."]
+[node name="GHlogo" type="Sprite3D" parent="."]
 transform = Transform( -2, 1.74846e-07, -4.37114e-08, -8.74228e-08, 3.82137e-15, 1, 1.74846e-07, 2, 1.91069e-15, 6, 0.1, -6 )
-texture = ExtResource( 4 )
+texture = ExtResource( 2 )
 
 [node name="IGlogo" type="Sprite3D" parent="."]
 transform = Transform( -2, 1.74846e-07, -4.37114e-08, -8.74228e-08, 0, 1, 1.74846e-07, 2, 3.55271e-15, 6, 0.1, 6 )
@@ -91,34 +83,18 @@ valign = 1
 transform = Transform( -10, -1.50996e-06, 0, 2.84217e-14, -4.37114e-07, -10, 1.50996e-06, -10, 4.37114e-07, -12, 0.1, 0.477242 )
 texture = SubResource( 15 )
 
-[node name="ViewportTW" type="Viewport" parent="."]
+[node name="ViewportGH" type="Viewport" parent="."]
 size = Vector2( 280, 100 )
 transparent_bg = true
 
-[node name="tw" type="Sprite3D" parent="ViewportTW"]
+[node name="gh" type="Sprite3D" parent="ViewportGH"]
 transform = Transform( -10, -1.50996e-06, 0, 2.84217e-14, -4.37114e-07, -10, 1.50996e-06, -10, 4.37114e-07, -12, 0.1, -5.44026 )
 texture = SubResource( 16 )
 
-[node name="Label" type="Label" parent="ViewportTW"]
+[node name="Label" type="Label" parent="ViewportGH"]
 margin_right = 100.0
 margin_bottom = 120.0
 custom_fonts/font = SubResource( 8 )
-text = "@ramanusabakti"
-align = 1
-valign = 1
-
-[node name="ViewportFB" type="Viewport" parent="."]
-size = Vector2( 280, 100 )
-transparent_bg = true
-
-[node name="fb" type="Sprite3D" parent="ViewportFB"]
-transform = Transform( -10, -1.50996e-06, 0, 2.84217e-14, -4.37114e-07, -10, 1.50996e-06, -10, 4.37114e-07, -12, 0.1, -11.0551 )
-texture = SubResource( 17 )
-
-[node name="Label" type="Label" parent="ViewportFB"]
-margin_right = 100.0
-margin_bottom = 120.0
-custom_fonts/font = SubResource( 8 )
-text = "R Nusa Bakti"
+text = "/noosabaktee"
 align = 1
 valign = 1

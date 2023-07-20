@@ -1,12 +1,14 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://img/splash.png" type="Texture" id=1]
 [ext_resource path="res://codes/Splash.gd" type="Script" id=2]
-[ext_resource path="res://img/message.png" type="Texture" id=3]
 [ext_resource path="res://font/PixelOperator-Bold.ttf" type="DynamicFontData" id=4]
 
 [sub_resource type="DynamicFont" id=1]
-size = 56
+size = 55
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 55
 font_data = ExtResource( 4 )
 
 [node name="Node2D" type="Node2D"]
@@ -21,49 +23,57 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control"]
+[node name="TextureRect" type="ColorRect" parent="CanvasLayer/Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-texture = ExtResource( 1 )
-expand = true
-stretch_mode = 7
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Control" type="Control" parent="CanvasLayer/Control/TextureRect"]
+[node name="Control" type="Control" parent="CanvasLayer/Control"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -20.0
-margin_top = -20.0
+margin_top = -50.0
 margin_right = 20.0
-margin_bottom = 20.0
+margin_bottom = -10.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TouchScreenButton" type="TouchScreenButton" parent="CanvasLayer/Control/TextureRect/Control"]
-position = Vector2( -100, 100 )
-scale = Vector2( 0.5, 0.7 )
-normal = ExtResource( 3 )
-
-[node name="Label" type="Label" parent="CanvasLayer/Control/TextureRect/Control/TouchScreenButton"]
+[node name="Label" type="Label" parent="CanvasLayer/Control/Control"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -253.5
-margin_top = -45.5
-margin_right = 253.5
-margin_bottom = 45.5
+margin_left = -197.0
+margin_top = -45.0
+margin_right = 197.0
+margin_bottom = 26.0
+custom_colors/font_color = Color( 0.584314, 0.470588, 0.470588, 1 )
 custom_fonts/font = SubResource( 1 )
-text = "Export My World"
+text = "HELLO WORLD!"
 align = 1
 valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="pressed" from="CanvasLayer/Control/TextureRect/Control/TouchScreenButton" to="." method="_on_TouchScreenButton_pressed"]
+[node name="Label2" type="Label" parent="CanvasLayer/Control/Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -155.0
+margin_top = 5.0
+margin_right = 97.0
+margin_bottom = 76.0
+custom_colors/font_color = Color( 0.207843, 0.160784, 0.160784, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "I'M RAMA"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

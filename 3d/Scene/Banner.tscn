@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://3d/obj/Banner.obj" type="ArrayMesh" id=1]
-[ext_resource path="res://img/poster.jpg" type="Texture" id=2]
+[ext_resource path="res://img/poster.png" type="Texture" id=2]
 
 [sub_resource type="SpatialMaterial" id=2]
 albedo_texture = ExtResource( 2 )
